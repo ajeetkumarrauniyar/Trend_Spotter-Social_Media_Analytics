@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { HoverCardProps } from '@/types/types';
 
 export const HoverCard: React.FC<HoverCardProps> = ({ children, className = "" }) => {
@@ -9,4 +9,18 @@ export const HoverCard: React.FC<HoverCardProps> = ({ children, className = "" }
     );
 };
 
+export const HoverCard2: React.FC<HoverCardProps> = ({ children, className, interactive = false }) => {
+    const [isHovered, setIsHovered] = useState(false);
+    return (
+        <div
+            className={`p-6 rounded-xl transition-all duration-300 ${interactive ? 'hover:scale-105 cursor-pointer' : ''
+                } backdrop-blur-sm border border-white/10 ${isHovered ? 'bg-white/15' : 'bg-white/5'
+                } ${className}`}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
+            {children}
+        </div>
+    );
+};
 

@@ -1,0 +1,40 @@
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes grid-flow {
+  to {
+    transform: translateY(-60px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-grid-flow {
+  animation: grid-flow 20s linear infinite;
+}
+
+.animate-text-gradient {
+  animation: text-gradient 8s linear infinite;
+}
+
+.bg-300\% {
+  background-size: 300%;
+}
+
+@keyframes text-gradient {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: -300% center;
+  }
+}

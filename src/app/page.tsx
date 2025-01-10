@@ -3,8 +3,8 @@
 import React from 'react';
 
 import Navigation from '@/app/components/Navigation';
-import HeroSection from '@/app/components/HeroSection';
-import CTA from '@/app/components/CTA';
+import { HeroSection } from '@/app/components/HeroSection';
+import { CTA } from '@/app/components/CTA';
 import { FeaturesSection } from '@/app/components/FeaturesSection';
 import Footer from '@/app/components/Footer'
 import { BackgroundGradient } from '@/app/components/BackgroundGradient';
